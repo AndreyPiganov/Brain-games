@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/AndreyPiganov/frontend-project-44#readme",
   "dependencies": {
+    "make": "^0.0.0",
     "readline-sync": "^1.4.10"
   }
 }
