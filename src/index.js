@@ -2,8 +2,8 @@ import UserHello from './cli.js';
 
 console.log('Welcome to the Brain Games!');
 const text = `My name:${UserHello()}`;
-const array = text.split(',');
-const name2 = array[array.length - 1];
+const massive = text.split(',');
+const name2 = massive[massive.length - 1];
 const min = 1;
 const max = 100;
 console.log(`Hello,${name2}`);
@@ -21,17 +21,17 @@ const NOD = (a, b) => {
   }
   return a;
 };
-const ProgressionRandom = (a,b) => {
-let n = 1;
-let ElementProgression = a + b;
-let result = [a,ElementProgression];
-while (n < 9){
-        ElementProgression += b;
-        result.push(ElementProgression);
-        n+=1;
-}
-return result;
-}
+const ProgressionRandom = (a, b) => {
+  let n = 1;
+  let ElementProgression = a + b;
+  const result = [a, ElementProgression];
+  while (n < 9) {
+    ElementProgression += b;
+    result.push(ElementProgression);
+    n += 1;
+  }
+  return result;
+};
 export {
   name2, min, max, RandomElement, NOD, ProgressionRandom,
 };
