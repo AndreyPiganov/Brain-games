@@ -10,7 +10,8 @@ console.log('What is the result of the expression?');
 while ((count <= 2) && (count >= -5)) {
   const random = Math.floor(Math.random() * (max - min + 1) + min);
   const random2 = Math.floor(Math.random() * (max - min + 1) + min);
-  const randomOperator = RandomElement().slice(0, 1);
+  const answers = ['+', '-', '*'];
+  const randomOperator = RandomElement(answers).slice(0, 1);
   console.log(`Question: ${random} ${randomOperator} ${random2}`);
   const answer = readlineSync.question('Your answer:');
   if (randomOperator === '+') {

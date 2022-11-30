@@ -7,10 +7,9 @@ const name2 = array[array.length - 1];
 const min = 1;
 const max = 100;
 console.log(`Hello,${name2}`);
-const RandomElement = () => {
-  const answers = ['+', '-', '*'];
+const RandomElement = (array) => {
   const RandomOperation = (Bot, Top, arr) => arr[Math.floor(Math.random() * (Top - Bot + 1)) + Bot];
-  return RandomOperation(0, answers.length - 1, answers);
+  return RandomOperation(0, array.length - 1, array);
 };
 const NOD = (a, b) => {
   while (a !== b) {
@@ -22,6 +21,17 @@ const NOD = (a, b) => {
   }
   return a;
 };
+const ProgressionRandom = (a,b) => {
+let n = 1;
+let ElementProgression = a + b;
+let result = [a,ElementProgression];
+while (n < 9){
+        ElementProgression += b;
+        result.push(ElementProgression);
+        n+=1;
+}
+return result;
+}
 export {
-  name2, min, max, RandomElement, NOD,
+  name2, min, max, RandomElement, NOD, ProgressionRandom,
 };
