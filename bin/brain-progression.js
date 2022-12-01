@@ -18,7 +18,7 @@ while ((count <= 2) && (count >= -5)) {
   }
   console.log(`Question: ${result.join(' ')}`);
   const answer = readlineSync.question('Your answer:');
-  if (ElementSlice[0] == answer) {
+  if (ElementSlice[0] === Number(answer)) {
     console.log('Correct!');
     count += 1;
   } else {
