@@ -12,16 +12,16 @@ const RandomElement = (array) => {
   return RandomOperation(0, array.length - 1, array);
 };
 const NOD = (a, b) => {
-  while (a !== b) {
-    let t = a;
-    let c = b;
+  let t = a;
+  let c = b;
+  while (t !== c) {
     if (t > c) {
       t -= c;
     } else {
       c -= t;
     }
   }
-  return a;
+  return t;
 };
 const ProgressionRandom = (a, b) => {
   let n = 1;
