@@ -13,7 +13,7 @@ while ((count <= 2) && (count >= -5)) {
   console.log(`Question: ${random} ${random2}`);
   const answer = readlineSync.question('Your answer:');
   const MaxDivisorRandom = NOD(random, random2);
-  if (MaxDivisorRandom == answer) {
+  if (MaxDivisorRandom === Number(answer)) {
     console.log('Correct!');
     count += 1;
   } else {
