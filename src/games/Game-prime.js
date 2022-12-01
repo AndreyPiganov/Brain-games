@@ -2,9 +2,9 @@ import readlineSync from 'readline-sync';
 import { name2, min, max } from '../index.js';
 
 const GamePrimeData = () => {
-  let count = 0;
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  while (count <= 2) {
+  let count = 0;
+  while ( count <= 2) {
     const random = Math.floor(Math.random() * (max - min + 1) + min);
     console.log(`Question: ${random}`);
     const answer = readlineSync.question('Your answer: ');
