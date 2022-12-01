@@ -21,7 +21,7 @@ while ((count <= 2) && (count >= -5)) {
   } else if (randomOperator === '*') {
     result = random * random2;
   }
-  if (result == answer) {
+  if (result === Number(answer)) {
     count += 1;
     console.log('Correct!');
   } else {
