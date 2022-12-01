@@ -14,7 +14,7 @@ while ((count <= 2) && (count >= -5)) {
   } else if ((random % 2 === 0) && (answer === 'no')) {
     console.log('"no" is wrong answer ;(. Correct answer was "yes".');
     count -= 10;
-    console.log(`Let's try again, ${name2}`);
+    console.log(`Let's try again,${name2}`);
   } else if (random % 2 === 1 && answer === 'yes') {
     console.log('"yes" is wrong answer ;(. Correct answer was "no".');
     count -= 10;
