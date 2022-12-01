@@ -24,7 +24,7 @@ while ((count <= 2) && (count >= -5)) {
   } else {
     console.log(`"${answer}" is wrong answer ;(. Correct answer was "${ElementSlice[0]}".`);
     count -= 10;
-    console.log(`Lets try again,${name2}!`);
+    console.log(`Let's try again,${name2}`);
   }
   if (count === 3) {
     console.log(`Congratulations,${name2}`);
