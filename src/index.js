@@ -13,10 +13,12 @@ const RandomElement = (array) => {
 };
 const NOD = (a, b) => {
   while (a !== b) {
-    if (a > b) {
-      a -= b;
+    let t = a;
+    let c = b;
+    if (t > c) {
+      t -= c;
     } else {
-      b -= a;
+      c -= t;
     }
   }
   return a;
