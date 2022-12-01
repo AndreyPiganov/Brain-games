@@ -27,7 +27,7 @@ while ((count <= 2) && (count >= -5)) {
   } else {
     console.log(`"${answer}" is wrong answer ;(. Correct answer was "${result}".`);
     count -= 10;
-    console.log(`Lets try again,${name2}!`);
+    console.log(`Lets try again,${name2}`);
   }
   if (count === 3) {
     console.log(`Congratulations,${name2}`);
