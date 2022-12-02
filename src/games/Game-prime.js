@@ -1,50 +1,22 @@
-import readlineSync from 'readline-sync';
-import { name2, min, max } from '../index.js';
+import startGame from '../index.js';
+import { getRandomInt, getRandomPrime } from '../helpers.js';
 
+const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const GamePrimeData = () => {
-  let count = 0;
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  while (count <= 2) {
-    const random = Math.floor(Math.random() * (max - min + 1) + min);
-    console.log(`Question: ${random}`);
-    const answer = readlineSync.question('Your answer: ');
-    const counter = 10;
-    let counter2 = 0;
-    for (let i = 2; i <= counter; i += 1) {
-      if (random === i) {
-        counter2 += 0;
-      } else if ((random % i === 0)) {
-        counter2 += 1;
-      }
-    }
-    if ((random === 1) && (answer === 'yes')) {
-      console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-      count += 5;
-      console.log(`Let's try again, ${name2}`);
-    } else if ((random === 1) && (answer === 'no')) {
-      console.log('Correct!');
-      count += 1;
-    } else if ((counter2 === 0) && (answer === 'yes')) {
-      console.log('Correct!');
-      count += 1;
-    } else if ((counter2 === 0) && (answer === 'no')) {
-      console.log('"no" is wrong answer ;(. Correct answer was "yes".');
-      count += 5;
-      console.log(`Let's try again,${name2}`);
-    } else if ((counter2 !== 0) && (answer === 'yes')) {
-      console.log('"yes" is wrong answer ;(. Correct answer was "no".');
-      count += 5;
-      console.log(`Let's try again,${name2}`);
-    } else if ((counter2 !== 0) && (answer === 'no')) {
-      console.log('Correct!');
-      count += 1;
-    } else {
-      count += 5;
-      console.log('Something went wrong :)');
-    }
-    if (count === 3) {
-      console.log(`Congratulations,${name2}`);
-    }
+  const answer = ['yes', 'no'];
+  const question = getRandomInt();
+  const indexPrime = getRandomPrime(question);
+  if (indexPrime === 1) {
+    return [question, answer[1]];
   }
+  if (question === 1) {
+    return [question, answer[1]];
+  }
+  if (indexPrime === 0) {
+    return [question, answer[0]];
+  }
+  return false;
 };
-export default GamePrimeData;
+export default function primeGame() {
+  startGame(descriptionGame, GamePrimeData);
+}

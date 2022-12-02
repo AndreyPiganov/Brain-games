@@ -1,39 +1,22 @@
-import UserHello from './cli.js';
+import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
-const text = `My name:${UserHello()}`;
-const massive = text.split(',');
-const name2 = massive[massive.length - 1];
-const min = 1;
-const max = 100;
-console.log(`Hello,${name2}`);
-const RandomElement = (array) => {
-  const RandomOperation = (Bot, Top, arr) => arr[Math.floor(Math.random() * (Top - Bot + 1)) + Bot];
-  return RandomOperation(0, array.length - 1, array);
-};
-const NOD = (a, b) => {
-  let t = a;
-  let c = b;
-  while (t !== c) {
-    if (t > c) {
-      t -= c;
-    } else {
-      c -= t;
+export default function startGame(descriptionGame, getGame) {
+  const countIterations = 3; // sets count of question
+
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log(descriptionGame);
+  for (let i = 0; i < countIterations; i += 1) {
+    const [question, correctAnswer] = getGame();
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
+    console.log('Correct!');
   }
-  return t;
-};
-const ProgressionRandom = (a, b) => {
-  let n = 1;
-  let ElementProgression = a + b;
-  const result = [a, ElementProgression];
-  while (n < 9) {
-    ElementProgression += b;
-    result.push(ElementProgression);
-    n += 1;
-  }
-  return result;
-};
-export {
-  name2, min, max, RandomElement, NOD, ProgressionRandom,
-};
+  console.log(`Congratulations, ${name}!`);
+}
