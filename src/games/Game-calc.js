@@ -8,7 +8,7 @@ const GameCalcData = () => {
   const random2 = getRandomInt();
   const answers = ['+', '-', '*'];
   const randomOperator = RandomElement(answers).slice(0, 1);
-  const question = ` ${random} ${randomOperator} ${random2}`;
+  const question = `${random} ${randomOperator} ${random2}`;
   if (randomOperator === '+') {
     answer = random + random2;
   } else if (randomOperator === '-') {
