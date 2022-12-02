@@ -18,5 +18,5 @@ export default function startGame(descriptionGame, getGame) {
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations,${name}!`);
+  console.log(`Congratulations, ${name}!`);
 }
