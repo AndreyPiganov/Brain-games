@@ -30,13 +30,13 @@ function getRandomInt(minValue = 1, maxValue = 100) {
   const max = Math.ceil(maxValue);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function getRandomPrime(random) {
+function getRandomPrime(randomNum) {
   const counter = 10;
   let counter2 = 0;
   for (let i = 2; i <= counter; i += 1) {
-    if (random === i) {
+    if (randomNum === i) {
       counter2 += 0;
-    } else if (random % i === 0) {
+    } else if (randomNum % i === 0) {
       counter2 += 1;
     }
   }
