@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import UserHello from '../src/cli.js';
+import userHello from '../src/cli.js';
 
-console.log(UserHello());
+console.log(userHello());

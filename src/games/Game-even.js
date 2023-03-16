@@ -2,7 +2,7 @@ import startGame from '../index.js';
 import { getRandomInt } from '../helpers.js';
 
 const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-const GameEvenData = () => {
+const gameEvenData = () => {
   const answer = ['yes', 'no'];
   const question = getRandomInt();
   if (question % 2 === 0) {
@@ -13,5 +13,5 @@ const GameEvenData = () => {
   return false;
 };
 export default function evenGame() {
-  startGame(descriptionGame, GameEvenData);
+  startGame(descriptionGame, gameEvenData);
 }
