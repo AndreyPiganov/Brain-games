@@ -43,5 +43,5 @@ function getRandomPrime(randomNum) {
 }
 
 export {
-  getNod, getProgressionRandom, getRandomPrime,getQuestion, getRandom
+  getNod, getProgressionRandom, getRandomPrime, getQuestion, getRandom,
 };

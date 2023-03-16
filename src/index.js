@@ -10,7 +10,7 @@ export default function startGame(descriptionGame, getGame) {
   for (let i = 0; i < countIterations; i += 1) {
     const [question, correctAnswer] = getGame();
     console.log(`Question: ${question}`);
-    const userAnswer = getQuestion('Your answer:')
+    const userAnswer = getQuestion('Your answer:');
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);

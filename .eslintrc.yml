@@ -8,6 +8,7 @@ parserOptions:
   ecmaVersion: latest
 
 rules: 
+  max-len: 0
   no-console: 0
   import/extensions:
     - error
