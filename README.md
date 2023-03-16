@@ -6,7 +6,7 @@
 make Install
 ### Run
 The command for greeting - brain-games
-Commands to run games: brain-calc, brain-even, brain-gcd, brain-prime, brain-progression
+Commands to run games: brain-calc, brain-even, brain-gcd, brain-prime, brain-progression 
 ### brain-even
 [![asciicast](https://asciinema.org/a/540719.svg)](https://asciinema.org/a/540719)
 ### brain-calc
