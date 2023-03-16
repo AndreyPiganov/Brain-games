@@ -1,12 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const getRandomOperation = (Bot, Top, arr) => arr[Math.floor(Math.random() * (Top - Bot + 1)) + Bot];
+const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (Math.ceil(max) - Math.ceil(min) + 1)) + Math.ceil(min);
 
 const getQuestion = (description) => readlineSync.question(description);
-
-const getRandomElement = (array) => {
-  return getRandomOperation(0, array.length - 1, array);
-};
 
 const getNod = (a, b) => {
   let t = a;
@@ -33,12 +29,6 @@ const getProgressionRandom = (a, b) => {
   return result;
 };
 
-function getRandomInt(minValue = 1, maxValue = 100) {
-  const min = Math.ceil(minValue);
-  const max = Math.ceil(maxValue);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 function getRandomPrime(randomNum) {
   const counter = 10;
   let counter2 = 0;
@@ -53,5 +43,5 @@ function getRandomPrime(randomNum) {
 }
 
 export {
-  getRandomElement, getNod, getProgressionRandom, getRandomInt, getRandomPrime,getQuestion
+  getNod, getProgressionRandom, getRandomPrime,getQuestion, getRandom
 };

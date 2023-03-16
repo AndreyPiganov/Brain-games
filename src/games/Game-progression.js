@@ -1,12 +1,12 @@
 import startGame from '../index.js';
 import {
-  getProgressionRandom, getRandomInt,
+  getProgressionRandom, getRandom,
 } from '../helpers.js';
 
 const descriptionGame = 'What number is missing in the progression?';
 const progressionData = () => {
-  const random = getRandomInt();
-  const random2 = getRandomInt();
+  const random = getRandom();
+  const random2 = getRandom();
   const result = getProgressionRandom(random, random2);
   const elementRandom = Math.floor(Math.random() * ((result.length - 1) - 1 + 1) + 1);
   const answer = result.slice(elementRandom, elementRandom + 1);

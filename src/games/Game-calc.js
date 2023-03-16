@@ -1,13 +1,13 @@
-import { getRandomElement, getRandomInt } from '../helpers.js';
+import { getRandom } from '../helpers.js';
 import startGame from '../index.js';
 
 const descriptionGame = 'What is the result of the expression?';
 const calcData = () => {
   let answer = 0;
-  const random = getRandomInt();
-  const random2 = getRandomInt();
+  const random = getRandom();
+  const random2 = getRandom();
   const answers = ['+', '-', '*'];
-  const randomOperator = getRandomElement(answers).slice(0, 1);
+  const randomOperator = answers[getRandom(0, answers.length - 1)].slice(0, 1);
   const question = `${random} ${randomOperator} ${random2}`;
   if (randomOperator === '+') {
     answer = random + random2;

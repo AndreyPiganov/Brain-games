@@ -1,10 +1,10 @@
 import startGame from '../index.js';
-import { getRandomInt } from '../helpers.js';
+import { getRandom } from '../helpers.js';
 
 const descriptionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 const evenData = () => {
   const answer = ['yes', 'no'];
-  const question = getRandomInt();
+  const question = getRandom();
   if (question % 2 === 0) {
     return [question, answer[0]];
   } if (question % 2 === 1) {
