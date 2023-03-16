@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (Math.ceil(max) - Math.ceil(min) + 1)) + Math.ceil(min);
+const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const getQuestion = (description) => readlineSync.question(description);
 
