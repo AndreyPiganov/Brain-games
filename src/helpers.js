@@ -1,8 +1,8 @@
-const randomElement = (array) => {
-  const randomOperation = (Bot, Top, arr) => arr[Math.floor(Math.random() * (Top - Bot + 1)) + Bot];
-  return randomOperation(0, array.length - 1, array);
+const getRandomOperation = (Bot, Top, arr) => arr[Math.floor(Math.random() * (Top - Bot + 1)) + Bot];
+const getRandomElement = (array) => {
+  return getRandomOperation(0, array.length - 1, array);
 };
-const nod = (a, b) => {
+const getNod = (a, b) => {
   let t = a;
   let c = b;
   while (t !== c) {
@@ -14,7 +14,7 @@ const nod = (a, b) => {
   }
   return t;
 };
-const progressionRandom = (a, b) => {
+const getProgressionRandom = (a, b) => {
   let n = 1;
   let elementProgression = a + b;
   const result = [a, elementProgression];
@@ -43,5 +43,5 @@ function getRandomPrime(random) {
   return counter2;
 }
 export {
-  randomElement, nod, progressionRandom, getRandomInt, getRandomPrime,
+  getRandomElement, getNod, getProgressionRandom, getRandomInt, getRandomPrime,
 };
